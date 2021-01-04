@@ -1,0 +1,79 @@
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.RGB_Grid{
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(90vw / 4), 1fr));
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+}
+.RGB_Grid *{
+    font-weight: 600;
+}
+.Title{
+    grid-column: 1/5;
+    grid-row: 1;
+    justify-self: center;
+    align-self: flex-end;
+    display:flex;
+    flex-direction: row;
+    
+
+}
+.Title h1{
+    font-size: 30px;
+    opacity: 0.5;
+}
+.Title h3{
+    font-size: 20px;
+    opacity: 0.9;
+}
+.Title div{
+    margin-bottom: 25px;
+    margin-right: 10vw;
+}
+
+.Title div:last-child{
+    margin: 0;
+}
+@media (max-width: 575px){
+    .Title{
+        flex-direction: column;
+    }
+    .Title div:first-child{
+        margin-top: 30px;
+    }
+}
+@media (max-width: 682px){
+    .Title h1{
+        font-size: 25px;
+    }
+    .Title h3{
+        font-size: 16px;
+    }
+}
+
+@media (max-width:880px){
+    
+    .Hex{
+        grid-column: 1/4;
+        grid-row: 1;
+    }
+    .RGB_Grid{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+    #alpha{
+        align-self: flex-start;
+        grid-column: 2;
+    }
+}
+
